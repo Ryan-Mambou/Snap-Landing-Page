@@ -45,11 +45,13 @@ dropdowns.forEach(dropdown => {
         dropdown.classList.toggle('active');
         const caret = dropdown.firstElementChild;
         const panel = dropdown.nextElementSibling;
-        if(dropdown.classList.contains('active')){
+            if(dropdown.classList.contains('active')){
+            panel.classList.remove('max-h-0')
             panel.classList.add('max-h-28')
             caret.classList.add('transform', 'rotate-180')
         }
         else {
+            panel.classList.add('max-h-0')
             panel.classList.remove('max-h-28')
             caret.classList.remove('transform', 'rotate-180')
         }
