@@ -6,6 +6,7 @@ const hamburger = document.querySelector('#hamburger');
 const menu = document.querySelector('#menu');
 const closeIcon = document.querySelector('#closeIcon');
 const dropdowns = document.querySelectorAll('#dropdown');
+const backdrop = document.querySelector('#backdrop');
 
 function dropdown(element){
     let caret = element.previousElementSibling
@@ -30,10 +31,12 @@ feature.addEventListener('click', () => {
 })
 
 hamburger.addEventListener('click', () => {
+    menu.classList.remove('translate-x-96')
     menu.classList.add('translate-x-0')
 })
 
 closeIcon.addEventListener('click', () => {
+    menu.classList.add('translate-x-96')
     menu.classList.remove('translate-x-0');
 })
 

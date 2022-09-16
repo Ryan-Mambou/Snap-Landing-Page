@@ -9,8 +9,8 @@ module.exports = {
       fontFamily: {
         'epilogue': ['Epilogue']
       },
-      imageWidth:{
-        
+      backgroundColor: {
+        'backdrop': 'rgba(0, 0, 0, 0.3)'
       }
     },
   },
