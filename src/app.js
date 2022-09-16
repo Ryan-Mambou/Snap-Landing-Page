@@ -8,17 +8,15 @@ const closeIcon = document.querySelector('#closeIcon');
 const dropdowns = document.querySelectorAll('#dropdown');
 
 function dropdown(element){
-    console.log(element.childNodes)
-    let caret = element.firstElementChild
-    console.log(caret)
+    let caret = element.previousElementSibling
     if (element.classList.contains('block')){
         element.classList.remove('block')
-        caret.classList.add('transform', 'rotate-180')
+        caret.classList.remove('rotate-180')
         element.classList.add('hidden')
     }
     else {
         element.classList.remove('hidden')
-        caret.classList.remove('transform', 'rotate-180')
+        caret.classList.add('rotate-180')
         element.classList.add('block')
     }
 }
@@ -42,7 +40,6 @@ closeIcon.addEventListener('click', () => {
 dropdowns.forEach(dropdown => {
     dropdown.addEventListener('click', () => {
         dropdown.classList.toggle('active');
-        console.log(dropdown.firstElementChild)
         const caret = dropdown.firstElementChild;
         const panel = dropdown.nextElementSibling;
         if(dropdown.classList.contains('active')){
